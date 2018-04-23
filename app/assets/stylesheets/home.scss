@@ -1,3 +1,65 @@
+/* reset ================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* 共通レイアウト ================================ */
+body {
+  color: #222;
+  background-color: #fff;
+  margin: 0;
+  min-height: 1vh;
+}
+
+.main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
 body {
   width: 750px;
 }
@@ -8,16 +70,10 @@ body {
   width: 100%;
   height: auto;
   min-height: 100%;
+  margin-top: 100px;
 }
 
-a {
-  text-decoration: none;
-  color: #555;
-}
 
-a:hover{
-  text-decoration: none;
-}
 /* ヘッダー ================================ */
 
 header {
@@ -36,7 +92,7 @@ header {
 
 #menu{
   width: auto;
-  height: 50px;
+  height: 70px;
   padding: 5px 30px;
   border-top: 1px #cccccc solid;
   border-bottom: 1px #cccccc solid;
@@ -47,14 +103,14 @@ header {
 #menu li{
   width: 100px;
   float: right;
-  padding: 5px 15px;
+  padding: 5px 10px;
   margin: 0;
 
 }
 
 #menu li a{
   width: auto;
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
   padding: 12px 0;
   text-decoration: none;
@@ -64,7 +120,7 @@ header {
 
 #menu li a:hover{
   text-decoration: none;
-  background-color: #ccc;
+  color: #888;
 }
 
 /* ここまで ================================ */
@@ -86,7 +142,7 @@ header {
 }
 
 .top-main {
-  margin-top: 50px;
+  margin-top: 150px;
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
@@ -108,7 +164,7 @@ header {
 
 /* info ================================ */
 .info {
-  width: 100%;
+  width: 80%;
   height: 500px;
   margin: 350px auto 350px auto;
   background-color: #ffdde9;
