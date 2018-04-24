@@ -1,11 +1,24 @@
 /* posts/index ================================ */
+
 .posts-index-item {
-  
+  width: 280px;
+  height: 400px;
+  float: left;
+  margin: 5px;
   padding: 20px 30px;
   background-color: white;
   overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
+  border: solid 1px #bbb;
 }
+
+.posts-title{
+  border-bottom: solid 1px #bbb;
+}
+
+.posts-title a:hover{
+  color: #faa;
+}
+
 
 .post-left img {
   width: 50px;
@@ -40,12 +53,24 @@
   display: inline;
 }
 
+.posts-show-title{
+  padding: 10px;
+  background-color: #fff;
+  border: solid 1px #bbb;
+  margin-bottom: 5px;
+}
+
+.posts-show-title p{
+  font-size: 20px;
+}
+
 .posts-show-item {
   padding: 30px;
   background-color: white;
-  box-shadow: 0 2px 6px #c1ced7;
+  border: solid 1px #bbb;
   overflow: hidden;
 }
+
 
 .posts-show-item img {
   width: 60px;
@@ -64,7 +89,7 @@
 
 .posts-show-item p {
   font-size: 24px;
-  margin: 20px 0;
+  margin: px 0;
 }
 
 .post-time {
