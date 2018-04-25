@@ -4,5 +4,28 @@
       <img src="<%= "/user_images/#{@user.image_name}" %>">
       <h2><%= @user.name %></h2>
     </div>
+
+    <% @user.posts.each do |post| %>
+
+    <div class="posts-index-item">
+      <div class="posts-title">
+      <%= link_to(post.title,"/posts/#{post.id}") %>
+      </div>
+
+      <div class="posts-image">
+        <p>
+          <img src="<%= "/post_image/#{post.post_image}" %>">
+        </p>
+      </div>
+
+      <div class="post-user-name">
+        <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+      </div>
+
+    </div>
+
+    <% end %>
+    
   </div>
 </div>

@@ -91,31 +91,29 @@
 }
 
 .posts-show-image img{
-  width: 300px;
-  height: auto;
+  width: 850px;
+  height: 300px;
   margin-right: 20px;
+  object-fit: cover;
 
 }
 
-
-
 .posts-show-item {
-
+  width: 850px;
   padding: 15px;
   background-color: white;
-  border: solid 1px #bbb;
+  border: solid 1px #ddd;
   overflow: hidden;
 }
 
 .posts-show-item .post-user-name a {
   vertical-align: middle;
-  font-size: 24px;
+  font-size: 20px;
   margin-left: 15px;
 }
 
 .posts-show-item p {
   font-size: 24px;
-  margin: px 0;
 }
 
 .post-time {
