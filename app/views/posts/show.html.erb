@@ -1,21 +1,32 @@
 <div class="main posts-show">
   <div class="container">
+
     <div class="posts-show-title">
       <p>
         <%= @post.title %>
       </p>
     </div>
-    <div class="posts-show-image">
+
+    <div class="post-user-name">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
     </div>
+
+    <div class="posts-show-image">
+      <img src="<%= "/post_image/#{@post.post_image}" %>">
+    </div>
+
     <div class="posts-show-item">
       <p>
         <%= @post.content %>
       </p>
     </div>
+
     <div class="post-time">
       <p>
         <%= @post.created_at %>
       </p>
     </div>
+
   </div>
 </div>
