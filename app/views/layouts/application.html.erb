@@ -10,12 +10,20 @@
 
   <body>
     <header>
+
       <div id="Applogo">
         <h1><%= link_to("アプリ名","/") %></h1>
       </div>
       <ul id="menu">
-        <li><a href="*">ログイン</a></li>
-        <li><a href="*">新規登録</a></li>
+        <% current_user = User.find_by(id: session[:user_id]) %>
+          <% if current_user %>
+            <li>
+              <%=link_to(current_user.name,"/users/#{current_user.id}") %>
+            </li>
+          <% end %>
+
+        <li><%= link_to("ログイン", "/login") %></li>
+        <li><%= link_to("新規登録","/users/new") %></li>
         <li><a href="a">ログアウト</a></li>
         <li><%= link_to("投稿一覧","/posts/index")%></li>
         <li><a href="a">新規投稿</a></li>

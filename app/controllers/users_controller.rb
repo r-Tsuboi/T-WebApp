@@ -7,5 +7,23 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  def new
+  end
+
+  def login_form
+  end
+
+  def login
+    @user = User.find_by(email: params[:email],password: params[:password])
+    if @user
+      session[:user_id] = @user.id
+      flash[:notice] = "ログインできました"
+      redirect_to("/posts/index")
+    else
+      @error_massage = "ログインできませんでした"
+      render("/users/login_form")
+    end
+  end
+
 
 end
