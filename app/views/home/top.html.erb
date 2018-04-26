@@ -12,4 +12,18 @@
     </div>
   </div>
 
+  <% if session[:user_id] %>
+  <% else %>
+  <div class="user-link">
+    <div class="signup-link">
+      <p>まだ登録していない方</p>
+      <%= link_to("新規登録","/signup") %>
+    </div>
+    <div class="login-link">
+      <p>すでに登録している方</p>
+      <%= link_to("ログイン","/login") %>
+  </div>
+  </div>
+  <% end %>
+
 </div>

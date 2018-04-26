@@ -4,7 +4,7 @@
 }
 
 html {
-  font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+  font: 100%/1.5 'Avenir Next', 'Yu Gothic', sans-serif;
   line-height: 1.7;
   letter-spacing: 1px;
 }
@@ -168,7 +168,7 @@ header {
 .info {
   width: 80%;
   height: 500px;
-  margin: 350px auto 350px auto;
+  margin: 350px auto 50px auto;
   background-color: #ffeee9;
   border-radius: 10px;
   text-align: center;
@@ -187,6 +187,39 @@ header {
   font-size: 30px;
   color: #444;
 }
+/* ここまで ================================ */
+
+
+/* リンク ================================ */
+.user-link{
+  margin-bottom: 100px;
+
+}
+
+.signup-link{
+  margin: 20px;
+}
+
+.signup-link a{
+  font-size: 30px;
+}
+
+.signup-link a:hover{
+  color: #f99;
+}
+
+.login-link{
+  margin: 10px;
+}
+
+.login-link a{
+  font-size: 30px;
+}
+
+.login-link a:hover{
+  color: #f99;
+}
+
 /* ここまで ================================ */
 
 /* フォーム================================ */
