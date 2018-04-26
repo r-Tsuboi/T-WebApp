@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "users/new" => "users#new"
   post "login" => "users#login"
   get "login" => "users#login_form"
+  post "logout" => "users#logout"
 
   get "posts/index" => "posts#index"
   get "posts/:id" => "posts#show"
