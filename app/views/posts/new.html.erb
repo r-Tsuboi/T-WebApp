@@ -6,6 +6,8 @@
         <%= form_tag("/posts/create", {multipart: true}) do %>
         <p>タイトル</p>
         <input name="title">
+        <p>画像</p>
+        <input name="image" type="file">
         <p>内容</p>
         <textarea name="content"></textarea>
         <input type="submit" value="投稿">
