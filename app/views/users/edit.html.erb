@@ -8,8 +8,10 @@
             <%= message %>
           </div>
         <% end %>
-        
-        <%= form_tag("/users/#{@user.id}/update") do %>
+
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+        <p>アイコン</p>
+        <input name="image" type="file">
         <p>ユーザー名</p>
         <input name="name" value="<%= @user.name %>">
         <p>メールアドレス</p>
