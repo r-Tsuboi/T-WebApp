@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
-  validates :content, {length:{maximum: 500}}
+  validates :title, {presence: true}
+  validates :content, {length:{maximum: 500}, presence: true}
 
 def user
   return User.find_by(id: self.user_id)

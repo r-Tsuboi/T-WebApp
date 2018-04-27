@@ -60,7 +60,7 @@
   border-radius: 40%;
   margin: 10px 0 10px;
   object-fit: cover;
-  border: solid 1px #bbb;
+  border: solid 1px #ddd;
 }
 
 .user h2 {
@@ -115,4 +115,7 @@
 /* users/new, users/edit ================================ */
 .users-form input {
   margin-bottom: 15px;
+}
+
+.users-form input[type="file"]{
 }

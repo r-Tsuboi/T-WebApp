@@ -8,4 +8,15 @@ class PostsController < ApplicationController
     @user = User.find_by(id: @post.user_id)
   end
 
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new(title: params[:title], content: params[:content], post_image: params[:post_image])
+    if @post.save
+      redirect_to("/posts/index")
+    end
+  end
+
 end
