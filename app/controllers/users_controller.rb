@@ -23,6 +23,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    if @user.save
+      flash[:notice] = "変更が完了しました"
+      redirect_to("/users/#{@user.id}")
+    else
+      render("users/edit")
+    end
+  end
+
   def login_form
   end
 
