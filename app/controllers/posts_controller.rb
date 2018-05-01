@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id:params[:id])
+    @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
   end
 
@@ -32,7 +32,36 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
-
   end
+
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update
+    @post = Post.find_by(id: params[:id])
+    @post.title = params[:title]
+    @post.content = params[:content]
+
+    if params[:image]
+      @post.post_image ="#{@post.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/post_image/#{@post.post_image}", image.read)
+    end
+
+    if @post.save
+      redirect_to("/posts/index")
+    else
+      render("posts/edit")
+    end
+  end
+
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
+    flash[:notice] = "削除しました"
+    redirect_to("/posts/index")
+  end
+
 
 end
