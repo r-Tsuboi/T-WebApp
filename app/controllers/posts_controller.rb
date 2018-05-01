@@ -17,10 +17,15 @@ class PostsController < ApplicationController
                       post_image: params[:post_image], user_id:@current_user.id)
     @post.title = params[:title]
     @post.content = params[:content]
+    @post.save
 
+    if @post.post_image != nil
       @post.post_image = "#{@post.id}.jpg"
       image = params[:image]
       File.binwrite("public/post_image/#{@post.post_image}", image.read)
+    else
+      @post.post_image = "default_post.jpg"
+    end
 
     if @post.save
       redirect_to("/posts/index")
