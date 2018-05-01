@@ -250,6 +250,7 @@ header {
   width: 100%;
   border: 1px solid #ccc;
   padding: 10px;
+  margin: 5px;
   color: #57575f;
   font-size: 16px;
   letter-spacing: 2px;
@@ -259,9 +260,11 @@ header {
 
 .form textarea {
   width: 100%;
+  margin: 5px;
   min-height: 110px;
   font-size: 16px;
   letter-spacing: 2px;
+
 }
 
 .form input[type="submit"] {
