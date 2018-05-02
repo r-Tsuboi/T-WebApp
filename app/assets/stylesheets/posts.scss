@@ -125,6 +125,19 @@
   font-size: 14px;
 }
 
+.like {
+    float: left;
+    margin-right: 15px;
+}
+
+.like-btn-unlike a{
+  color: #ff3097;
+}
+
+.like-btn-like a:hover {
+  color: #ff3097;
+}
+
 /* posts/new ================================ */
 .posts-new textarea {
   font-size: 20px;

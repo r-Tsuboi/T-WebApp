@@ -27,18 +27,28 @@
         <%= @post.created_at %>
       </p>
     </div>
-    
-    <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
-    <%= link_to("いいね済", "/likes/#{@post.id}/destroy", {method: "post"}) %>
-    <% else %>
-    <%= link_to("いいねする", "/likes/#{@post.id}/create", {method: "post"}) %>
-    <% end %>
-
-    <% if See.find_by(user_id: @current_user.id, post_id: @post.id) %>
-    <%= link_to("わかる済", "/sees/#{@post.id}/destroy", {method: "post"}) %>
-    <% else %>
-    <%= link_to("わかるする", "/sees/#{@post.id}/create", {method: "post"}) %>
-    <% end %>
+    <div class="like">
+      <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+      <div class="like-btn-unlike">
+        <%= link_to("いいね!", "/likes/#{@post.id}/destroy", {method: "post"}) %>
+      </div>
+      <% else %>
+      <div class="like-btn-like">
+        <%= link_to("「いいね」する？", "/likes/#{@post.id}/create", {method: "post"}) %>
+      </div>
+      <% end %>
+    </div>
+    <div class="see">
+      <% if See.find_by(user_id: @current_user.id, post_id: @post.id) %>
+      <div class="like-btn-unlike">
+        <%= link_to("わかる!", "/sees/#{@post.id}/destroy", {method: "post"}) %>
+      </div>
+      <% else %>
+      <div class="like-btn-like">
+        <%= link_to("「わかる」する？", "/sees/#{@post.id}/create", {method: "post"}) %>
+      </div>
+      <% end %>
+  </div>
 
     <% if @post.user_id == @current_user.id %>
     <div class="post-menus">
