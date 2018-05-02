@@ -27,10 +27,17 @@
         <%= @post.created_at %>
       </p>
     </div>
+    
     <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
     <%= link_to("いいね済", "/likes/#{@post.id}/destroy", {method: "post"}) %>
     <% else %>
     <%= link_to("いいねする", "/likes/#{@post.id}/create", {method: "post"}) %>
+    <% end %>
+
+    <% if See.find_by(user_id: @current_user.id, post_id: @post.id) %>
+    <%= link_to("わかる済", "/sees/#{@post.id}/destroy", {method: "post"}) %>
+    <% else %>
+    <%= link_to("わかるする", "/sees/#{@post.id}/create", {method: "post"}) %>
     <% end %>
 
     <% if @post.user_id == @current_user.id %>
