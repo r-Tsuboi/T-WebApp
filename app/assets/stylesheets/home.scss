@@ -102,7 +102,7 @@ header {
 }
 
 #menu li{
-  width: 100px;
+  width: 120px;
   float: right;
   padding: 5px 10px;
   margin: 0;
@@ -113,7 +113,7 @@ header {
   width: auto;
   font-size: 13px;
   margin: 0;
-  padding: 12px 0;
+  padding: 12px 10px;
   text-decoration: none;
   display: block;
   text-align: center;
@@ -121,8 +121,9 @@ header {
 
 #menu li a:hover{
   text-decoration: none;
-  font-size: 15px;
-  color: #aaa;
+  background-color: #efefef;
+  color: #333;
+  border-radius: 3%;
 }
 
 /* ここまで ================================ */
