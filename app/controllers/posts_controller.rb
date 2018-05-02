@@ -17,9 +17,10 @@ class PostsController < ApplicationController
                       post_image: params[:post_image], user_id:@current_user.id)
     @post.title = params[:title]
     @post.content = params[:content]
+    @post.post_image = params[:post_image]
     @post.save
 
-    if @post.post_image != nil
+    if @post.post_image == nil
       @post.post_image = "#{@post.id}.jpg"
       image = params[:image]
       File.binwrite("public/post_image/#{@post.post_image}", image.read)
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
-    
+
   end
 
   def edit
