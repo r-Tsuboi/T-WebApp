@@ -5,9 +5,11 @@
       <p>
         <%= @post.title %>
       </p>
-      <h3>
-        <%= @tag.tag_name %>
-      </h3>
+      <% @tags.each do |tag| %>
+        <h3>
+          <%= tag.tag_name %>
+        </h3>
+      <% end %>
     </div>
 
     <div class="post-user-name">
