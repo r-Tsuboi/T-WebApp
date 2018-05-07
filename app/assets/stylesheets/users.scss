@@ -88,22 +88,26 @@
 }
 
 .user-tabs {
-  margin-top: 40px;
-  background-color: white;
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   overflow: hidden;
-  box-shadow: 0 2px 6px #c1ced7;
 }
 
 .user-tabs li {
   float: left;
 }
 
+.user-tabs li :hover {
+  color: #333;
+}
+
 .user-tabs li.active {
-  border-bottom: 2px solid #3ecdc6;
+  border-bottom: 3px solid #ff9ed0;
 }
 
 .user-tabs li.active a {
-  color: #57575f;
+  color: #555;
 }
 
 .user-tabs a {
