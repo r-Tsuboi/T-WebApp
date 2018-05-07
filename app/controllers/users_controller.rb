@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     @users = User.all
   end
@@ -66,6 +67,16 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
     redirect_to("/login")
+  end
+
+  def likes
+    @user = User.find_by(id: params[:id])
+    @like_posts = @user.like_posts
+  end
+
+  def sees
+    @user = User.find_by(id: params[:id])
+    @see_posts = @user.see_posts
   end
 
 
