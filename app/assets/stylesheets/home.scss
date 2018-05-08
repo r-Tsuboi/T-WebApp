@@ -122,8 +122,7 @@ header {
 
 #menu li a:hover{
   text-decoration: none;
-  background-color: #efefef;
-  color: #333;
+  color: #aaa;
   border-radius: 3%;
 }
 
@@ -168,7 +167,7 @@ header {
 
 /* info ================================ */
 .info {
-  width: 80%;
+  width: 90%;
   height: 500px;
   margin: 350px auto 50px auto;
   background-color: #ffeee9;
@@ -186,7 +185,9 @@ header {
 
 p.info-image-top img{
   width: 50%;
-  height: auto;
+  height: 350px;
+  padding: 0 0 30px 30px;
+  object-fit: cover;
   float: left;
   margin: auto 20px;
 }
@@ -203,7 +204,8 @@ p.info-image-top img{
   color: #222;
 }
 .info p {
-  font-size: 30px;
+  padding-top: 30px;
+  font-size: 25px;
   color: #444;
 }
 /* ここまで ================================ */

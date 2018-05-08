@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post.post_image = params[:post_image]
     @post.save
 
-    if @post.post_image == nil
+    if @post.post_image != nil
       @post.post_image = "#{@post.id}.jpg"
       image = params[:image]
       File.binwrite("public/post_image/#{@post.post_image}", image.read)
@@ -34,6 +34,15 @@ class PostsController < ApplicationController
     else
       render("posts/new")
     end
+
+    if  Tag.exists?(tag_name: params[:tag_name])
+      @tag = Tag.new(tag_name: params[:tag_name])
+      @tag.save
+    else
+      @tag = find_by(id: params[:id])
+    end
+    @search = Search.new(post_id: @post.id, tag_id: @tag.id)
+    @search.save
 
   end
 
