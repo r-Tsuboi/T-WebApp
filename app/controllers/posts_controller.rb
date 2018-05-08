@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
-    @search = Search.find_by(post_id: @post.id)
+    @search = Search.where(post_id: @post.id)
   end
 
   def new

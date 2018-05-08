@@ -3,7 +3,7 @@ class Search < ApplicationRecord
   validates :tag_id,{presence: true}
 
   def tags
-    return Tag.where(id: self.id)
+    return Tag.where(id: self.tag_id)
   end
 
 end
