@@ -7,7 +7,6 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @user = User.find_by(id: @post.user_id)
     @search = Search.find_by(post_id: @post.id)
-    @tags = Tag.where(id: @search.tag_id)
   end
 
   def new
