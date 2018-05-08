@@ -4,15 +4,24 @@
   </div>
 
   <div class="info">
-    <div class="info-text">
-      <h2>"しぇあスキ"とは</h2>
-      <p>説明してるよ<br>説明したいな<br>説明します</p>
+    <h2>"しぇあスキ"とは</h2>
+
+    <p class="info-image-top">
+      <img src="/info1.png">
+    </p>
+    <div class="info-text-top">
+      <p>みんなの"スキ"がたくさん詰まった場所で
+        あなたの"スキ"を投稿しよう</p>
+      <p>気に入った"スキ"には「わかる」や「いいね」ができるよ</p>
     </div>
+
   </div>
 
   <% if session[:user_id] %>
   <% else %>
   <div class="user-link">
+    <h3>さあ、あなたも始めよう</h3>
+  <div class="link">
     <div class="signup-link">
       <p>まだ登録していない方</p>
       <%= link_to("新規登録","/signup") %>
@@ -20,6 +29,7 @@
     <div class="login-link">
       <p>すでに登録している方</p>
       <%= link_to("ログイン","/login") %>
+    </div>
   </div>
   </div>
   <% end %>

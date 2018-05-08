@@ -176,8 +176,25 @@ header {
   text-align: center;
 }
 
-.info-text{
-  margin: 0px auto;
+.info h2 {
+  margin: 20px;
+}
+
+.info-top {
+  margin: 50px auto;
+}
+
+p.info-image-top img{
+  width: 50%;
+  height: auto;
+  float: left;
+  margin: auto 20px;
+}
+
+.info-text-top{
+  width: 40%;
+  height: auto;
+  margin: 20px auto;
   display: inline-block;
 }
 
@@ -194,12 +211,18 @@ header {
 
 /* リンク ================================ */
 .user-link{
-  margin-bottom: 100px;
-
+  margin: 0 auto 100px;
+  width: 60%;
 }
 
+.user-link h3 {
+  font-size: 50px;
+  font-weight: normal;
+}
+
+
 .signup-link{
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .signup-link a{
@@ -211,7 +234,7 @@ header {
 }
 
 .login-link{
-  margin: 10px;
+  margin: 20px auto;
 }
 
 .login-link a{
