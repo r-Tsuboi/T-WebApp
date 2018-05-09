@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "search/index" => "search#index"
+
   post "sees/:post_id/create" => "sees#create"
   post "sees/:post_id/destroy" => "sees#destroy"
 
