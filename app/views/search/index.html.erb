@@ -1,8 +1,8 @@
 <div class="main searchs-index">
   <div class="searchs-form">
-    <h1 class="form-heading">検索する</h1>
-    <div class="form">
-      <div class="form-body">
+    <h1 class="form-heading-searchs">検索する</h1>
+    <div class="form-searchs">
+      <div class="form-body-searchs">
         <input>
         <input type="submit" value="検索">
       </div>
@@ -11,7 +11,10 @@
 
   <div class="searchs-tag-index">
     <h1>タグ一覧</h1>
+    <% @tags.each do |tag| %>
     <div class="searchs-tag">
+      <p><%= tag.tag_name %></p>
     </div>
+    <% end %>
   </div>
 </div>

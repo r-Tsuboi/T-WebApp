@@ -1,5 +1,4 @@
 /* searchs/index ================================ */
-
 .searchs-index h1{
   font-weight: 300;
   margin: 60px 0 20px 60px;
@@ -7,6 +6,46 @@
   color: #555;
 }
 
-.searchs-form {
-  margin-top: -50px;
+.form-searchs {
+    max-width: 70%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: white;
+    border: solid #eee 1px;
+}
+
+.form-body-searchs {
+  padding: 30px;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.form-body-searchs input {
+  width: 75%;
+  height: 80px;
+  border: 1px solid #ccc;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #57575f;
+  letter-spacing: 4px;
+  padding: 30px;
+}
+
+.form-searchs input[type="submit"]{
+  background-color: #f99;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  width: 180px;
+  float: right;
+}
+
+.searchs-tag {
+  margin: auto 100px;
+}
+
+.searchs-tag p {
+  font-size: 35px;
+  padding-right: 25px;
+  float: left;
 }
