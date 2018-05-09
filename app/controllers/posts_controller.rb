@@ -35,6 +35,8 @@ class PostsController < ApplicationController
       render("posts/new")
     end
 
+    @tag = Tag.new
+
     if  Tag.exists?(tag_name: params[:tag_name])
       @tag = Tag.new(tag_name: params[:tag_name])
       @tag.save

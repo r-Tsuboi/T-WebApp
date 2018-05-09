@@ -5,11 +5,7 @@
       <p>
         <%= @post.title %>
       </p>
-      <% @search_tags.each do |tag| %>
-        <h3>
-          <%= tag.tag_name %>
-        </h3>
-      <% end %>
+
     </div>
 
     <div class="post-user-name">
@@ -27,11 +23,18 @@
       </p>
     </div>
 
-    <div class="post-time">
-      <p>
-        <%= @post.created_at %>
-      </p>
+    <div class="posts-show-tag">
+      <p>タグ</p>
+      <% @search_tags.each do |tag| %>
+        <h3>
+          <%= tag.tag_name %>
+        </h3>
+      <% end %>
     </div>
+
+    <div class="clear-element"></div>
+
+    <div class="posts-btn">
     <div class="like">
       <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
       <div class="like-btn-unlike">
@@ -53,6 +56,13 @@
         <%= link_to("「わかる」する？", "/sees/#{@post.id}/create", {method: "post"}) %>
       </div>
       <% end %>
+  </div>
+  </div>
+
+  <div class="post-time">
+    <p>
+      <%= @post.created_at %>
+    </p>
   </div>
 
     <% if @post.user_id == @current_user.id %>

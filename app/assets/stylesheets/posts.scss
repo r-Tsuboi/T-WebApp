@@ -110,19 +110,30 @@
   font-size: 24px;
 }
 
-.post-time {
-  color: #8899a6;
-  margin-bottom: 10px;
+.posts-show-tag {
+  clear: both;
+  padding: 10px;
 }
 
-.post-menus {
-  float: right;
+.posts-show-tag h3 {
+  font-size: 20px;
+  font-weight: normal;
+  float: left;
+  padding-right: 10px;
 }
 
 .post-menus a, .post-menus input {
   color: #8899a6;
   text-decoration: underline;
   font-size: 14px;
+}
+
+.clear-element {
+  clear: both;
+}
+
+.posts-btn{
+  padding: 5px;
 }
 
 .like {
@@ -136,6 +147,15 @@
 
 .like-btn-like a:hover {
   color: #ff3097;
+}
+
+.post-time {
+  color: #8899a6;
+  margin: 5px 10px;
+}
+
+.post-menus {
+  float: right;
 }
 
 /* posts/new ================================ */
