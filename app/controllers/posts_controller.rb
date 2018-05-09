@@ -39,15 +39,17 @@ class PostsController < ApplicationController
 
 
     if  Tag.exists?(tag_name: params[:tag_name])
-      @tag = Tag.find_by(id: params[:id])
+      @tag = Tag.find_by(tag_name: params[:tag_name])
     else
       @tag = Tag.new(tag_name: params[:tag_name])
       @tag.save
     end
-    @search = Search.new(post_id: @post.id, tag_id: @tag.id)
+    @search = Search.new(post_id: params[:post_id], tag_id: params[:tag_id])
+    @search.post_id = @post.id
+    @search.tag_id = @tag.id
     @search.save
-
   end
+
 
   def edit
     @post = Post.find_by(id: params[:id])
