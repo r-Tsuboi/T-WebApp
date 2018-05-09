@@ -11,6 +11,8 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @tag = Tag.new
+    @search = Search.new
   end
 
   def create
@@ -35,13 +37,12 @@ class PostsController < ApplicationController
       render("posts/new")
     end
 
-    @tag = Tag.new
 
     if  Tag.exists?(tag_name: params[:tag_name])
+      @tag = Tag.find_by(id: params[:id])
+    else
       @tag = Tag.new(tag_name: params[:tag_name])
       @tag.save
-    else
-      @tag = find_by(id: params[:id])
     end
     @search = Search.new(post_id: @post.id, tag_id: @tag.id)
     @search.save
