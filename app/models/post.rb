@@ -15,7 +15,6 @@ def search_tags
     tags.push(tag)
   end
   return tags
-
 end
 
 end

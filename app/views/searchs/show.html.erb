@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="form-heading">「<%= @tag.tag_name %>」の投稿</h1>
 
-    <% @tag.posts.each do |post| %>
+    <% @tag.search_posts.each do |post| %>
     <div class="posts-index-item">
       <div class="posts-title">
       <%= link_to(post.title,"/posts/#{post.id}") %>
