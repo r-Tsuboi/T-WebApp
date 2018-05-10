@@ -15,7 +15,7 @@
     <h1>タグ一覧</h1>
     <% @tags.each do |tag| %>
     <div class="searchs-tag">
-      <p><%= tag.tag_name %></p>
+      <%= link_to(tag.tag_name,"/searchs/#{tag.id}/show") %>
     </div>
     <% end %>
   </div>

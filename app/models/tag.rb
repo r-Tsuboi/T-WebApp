@@ -1,7 +1,7 @@
 class Tag < ApplicationRecord
 
-  def searchs
-    return Search.where(tag_id: self.id)
+  def posts
+    return Post.where(user_id: self.id)
   end
 
 end
