@@ -7,28 +7,29 @@
 }
 
 .form-searchs {
-    max-width: 70%;
-    height: 200px;
+    max-width: 80%;
+    height: 150px;
     margin: 0 auto;
     background-color: white;
     border: solid #eee 1px;
 }
 
 .form-body-searchs {
-  padding: 30px;
+  padding: 20px 40px;
   background-color: #fff;
   margin: 20px auto;
 }
 
 .form-body-searchs input {
   width: 75%;
-  height: 80px;
+  height: 70px;
   border: 1px solid #ccc;
   font-size: 30px;
   font-weight: lighter;
   color: #57575f;
   letter-spacing: 4px;
   padding: 30px;
+  margin-right: 30px; 
 }
 
 .form-searchs input[type="submit"]{
