@@ -1,4 +1,6 @@
 class Tag < ApplicationRecord
+  validates :tag_name, {presence: true}
+
 
   def search_posts
     posts = []

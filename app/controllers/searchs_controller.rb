@@ -7,7 +7,7 @@ class SearchsController < ApplicationController
 #未完成-----------ここから-------------------
   def search
     @word = params[:tag_name]
-    @tags = Tag.where("tag_name like '%" + @word + "%'")
+    @tags = Tag.where("tag_name like '%食べ物%'")
     redirect_to("/searchs/#{@tags.id}/result")
   end
 #未完成-----------ここまで-------------------
