@@ -8,6 +8,12 @@ class SearchsController < ApplicationController
   def search
     @word = params[:tag_name]
 
+    #空の検索を防ぎたい
+    if @word == nil
+      redirect_to("/searchs/index")
+      flash[:notice] = "文字を入力してください"
+    end
+
     if @tag = Tag.find_by("tag_name like '%" + @word + "%'")
       #キーワードに対してtag_nameを適用する
       redirect_to("/searchs/#{@tag.tag_name}/result")
