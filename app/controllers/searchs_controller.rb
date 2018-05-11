@@ -9,7 +9,7 @@ class SearchsController < ApplicationController
     @word = params[:tag_name]
 
     #空の検索を防ぎたい
-    if @word == nil
+    if params[:tag_name] == nil
       redirect_to("/searchs/index")
       flash[:notice] = "文字を入力してください"
     end

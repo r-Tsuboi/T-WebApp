@@ -10,6 +10,14 @@
             <input name="image" type="file">
           <p>内容</p>
             <textarea name="content"><%= @post.content %></textarea>
+          <p>現在登録されているタグ</p>
+          <% @search_tags.each do |tag| %>
+          <div class="posts-edit-tags">
+            <p>
+              <%= tag.tag_name %>
+            </p>
+          </div>
+          <% end %>
           <p>タグを追加する</p>
           <input name="tag_name">
           <input type="submit" value="保存">

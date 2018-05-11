@@ -53,6 +53,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find_by(id: params[:id])
+    @search_tags = @post.search_tags
 
   end
 
