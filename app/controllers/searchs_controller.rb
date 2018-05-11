@@ -15,8 +15,7 @@ class SearchsController < ApplicationController
     end
 
     if @tag = Tag.find_by("tag_name like '%" + @word + "%'")
-      #キーワードに対してtag_nameを適用する
-      redirect_to("/searchs/#{@tag.tag_name}/result")
+      redirect_to("/searchs/#{params[:tag_name]}")
     else
       redirect_to("/searchs/index")
       flash[:notice] = "検索結果がありませんでした"
@@ -26,7 +25,8 @@ class SearchsController < ApplicationController
 #未完成-----------ここまで-----------------------
 
   def result
-    @tag = Tag.find_by(tag_name: params[:tag_name])
+    @word = params[:tag_name]
+    @tag = Tag.find_by("tag_name like '%" + @word + "%'")
   end
 
   def show
