@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     @post.save
 
     if @post.post_image != nil
-      @post.post_image = "#{@post.id}.jpg"
+      @post.post_image ="#{@post.id}.jpg"
       image = params[:image]
       File.binwrite("public/post_image/#{@post.post_image}", image.read)
     else
