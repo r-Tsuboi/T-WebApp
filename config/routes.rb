@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get "searchs/index" => "searchs#index"
   post "searchs/search" => "searchs#search"
   get "searchs/:tag_name/result" => "searchs#result"
-  get "searchs/:id/show" => "searchs#show"
+  get "searchs/:tag_name/show" => "searchs#show"
 
   post "sees/:post_id/create" => "sees#create"
   post "sees/:post_id/destroy" => "sees#destroy"
