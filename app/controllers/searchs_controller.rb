@@ -4,13 +4,17 @@ class SearchsController < ApplicationController
     @tags = Tag.all
   end
 
-#未完成-----------ここから-------------------
+#未完成-----------ここから-----------------------
   def search
     @word = params[:tag_name]
-    @tags = Tag.where("tag_name like '%食べ物%'")
-    redirect_to("/searchs/#{@tags.id}/result")
+    if @tag = Tag.find_by("tag_name like '%" + @word + "%'")
+      #キーワードに対してtag_nameを適用する
+      redirect_to("/searchs/#{@tag.tag_name}/result")
+    else
+      #検索結果がない仕様のページ
+    end
   end
-#未完成-----------ここまで-------------------
+#未完成-----------ここまで-----------------------
 
   def result
     @tag = Tag.find_by(id: params[:id])
