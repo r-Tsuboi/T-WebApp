@@ -26,9 +26,7 @@
     <div class="posts-show-tag">
       <p>タグ</p>
       <% @search_tags.each do |tag| %>
-        <h3>
-          <%= tag.tag_name %>
-        </h3>
+        <%= link_to(tag.tag_name,"/searchs/#{tag.tag_name}/show") %>
       <% end %>
     </div>
 

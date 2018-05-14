@@ -124,11 +124,15 @@
   padding: 10px;
 }
 
-.posts-show-tag h3 {
+.posts-show-tag a {
   font-size: 20px;
   font-weight: normal;
   float: left;
   padding-right: 10px;
+}
+
+.posts-show-tag a:hover {
+  color: #4f4;
 }
 
 .post-menus a, .post-menus input {

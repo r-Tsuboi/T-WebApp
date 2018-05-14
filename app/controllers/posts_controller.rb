@@ -37,14 +37,15 @@ class PostsController < ApplicationController
       render("posts/new")
     end
 
-    @tags = params[:tag_name]
-    @base_tags = @tags.split(",")
+    @tag = params[:tag_name]
+    @base_tags = @tag.delete("　")
+    @tags = @base_tags.split(",")
 
-    @base_tags.each do |base_tag|
-      if  Tag.exists?(tag_name: base_tag)
-        @tag = Tag.find_by(tag_name: base_tag)
+    @tags.each do |tag|
+      if  Tag.exists?(tag_name: tag)
+        @tag = Tag.find_by(tag_name: tag)
       else
-        @tag = Tag.new(tag_name: base_tag)
+        @tag = Tag.new(tag_name: tag)
         @tag.save
       end
 
@@ -79,14 +80,15 @@ class PostsController < ApplicationController
       render("posts/edit")
     end
 
-    @tags = params[:tag_name]
-    @base_tags = @tags.split(",")
+    @tag = params[:tag_name]
+    @base_tags = @tag.delete("　")
+    @tags = @base_tags.split(",")
 
-    @base_tags.each do |base_tag|
-      if  Tag.exists?(tag_name: base_tag)
-        @tag = Tag.find_by(tag_name: base_tag)
+    @tags.each do |tag|
+      if  Tag.exists?(tag_name: tag)
+        @tag = Tag.find_by(tag_name: tag)
       else
-        @tag = Tag.new(tag_name: base_tag)
+        @tag = Tag.new(tag_name: tag)
         @tag.save
       end
 
@@ -100,6 +102,15 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find_by(id: params[:id])
     @post.destroy
+    @searchs = Search.where(post_id: @post.id)
+
+    @searchs.each do |search|
+      search.destroy
+
+
+    @tag = Tag.find_by(id: search.id)
+
+    end
     flash[:notice] = "削除しました"
     redirect_to("/posts/index")
   end
