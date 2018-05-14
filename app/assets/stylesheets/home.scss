@@ -87,14 +87,20 @@ header {
   text-align: center;
 }
 
-#Applogo h1{
-  font-size: 30px;
-  padding: 5px 0px;
+#Applogo {
+  height: auto;
+  margin: 10px auto;
+}
+
+#Applogo a{
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
 }
 
 #menu{
   width: auto;
-  height: 70px;
+  height: 60px;
   padding: 5px 30px;
   border-top: 1px #cccccc solid;
   border-bottom: 1px #cccccc solid;
@@ -107,7 +113,6 @@ header {
   float: right;
   padding: 5px 5px;
   margin: 0;
-
 }
 
 #menu li a{
@@ -115,7 +120,7 @@ header {
   font-size: 13px;
   font-weight: 500;
   margin: 0;
-  padding: 12px 5px;
+  padding: 8px 5px;
   text-decoration: none;
   display: block;
   text-align: center;
@@ -124,7 +129,6 @@ header {
 #menu li a:hover{
   text-decoration: none;
   color: #aaa;
-  border-radius: 3%;
 }
 
 /* top ================================ */
