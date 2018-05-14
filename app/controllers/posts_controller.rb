@@ -79,18 +79,22 @@ class PostsController < ApplicationController
       render("posts/edit")
     end
 
-    if  Tag.exists?(tag_name: params[:tag_name])
-      @tag = Tag.find_by(tag_name: params[:tag_name])
-    else
-      @tag = Tag.new(tag_name: params[:tag_name])
-      @tag.save
+    @tags = params[:tag_name]
+    @base_tags = @tags.split(",")
+
+    @base_tags.each do |base_tag|
+      if  Tag.exists?(tag_name: base_tag)
+        @tag = Tag.find_by(tag_name: base_tag)
+      else
+        @tag = Tag.new(tag_name: base_tag)
+        @tag.save
+      end
+
+      @search = Search.new(post_id: params[:post_id], tag_id: params[:tag_id])
+      @search.post_id = @post.id
+      @search.tag_id = @tag.id
+      @search.save
     end
-    @search = Search.new(post_id: params[:post_id], tag_id: params[:tag_id])
-    @search.post_id = @post.id
-    @search.tag_id = @tag.id
-    @search.save
-
-
   end
 
   def destroy
