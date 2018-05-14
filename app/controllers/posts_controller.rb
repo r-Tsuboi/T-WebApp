@@ -106,11 +106,8 @@ class PostsController < ApplicationController
 
     @searchs.each do |search|
       search.destroy
-
-
-    @tag = Tag.find_by(id: search.id)
-
     end
+
     flash[:notice] = "削除しました"
     redirect_to("/posts/index")
   end
