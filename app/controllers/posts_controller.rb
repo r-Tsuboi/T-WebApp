@@ -107,12 +107,23 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    #投稿を消す
     @post = Post.find_by(id: params[:id])
     @post.destroy
+    #登録しているタグを消す
     @searchs = Search.where(post_id: @post.id)
-
     @searchs.each do |search|
       search.destroy
+    end
+    #いいねされた情報を消す
+    @likes = Like.where(post_id: @post.id)
+    @likes.each do |like|
+      like.destroy
+    end
+    #わかるされた情報を消す
+    @sees = See.where(post_id: @post.id)
+    @sees.each do |see|
+      see.destroy
     end
 
     flash[:notice] = "削除しました"
