@@ -11,7 +11,7 @@ class SearchsController < ApplicationController
       redirect_to("/searchs/index")
       flash[:notice] = "文字を入力してください"
 
-    elsif @tag = Tag.find_by("tag_name like '%" + @word + "%'")
+    elsif @tags = Tag.where("tag_name like '%" + @word + "%'")
       redirect_to("/searchs/#{params[:tag_name]}")
 
     else
@@ -23,7 +23,11 @@ class SearchsController < ApplicationController
 
   def result
     @word = params[:tag_name]
-    @tag = Tag.find_by("tag_name like '%" + @word + "%'")
+    @search_tags = Tag.where("tag_name like '%" + @word + "%'")
+    @search_tags.each do |tag|
+      @tags = tag.search_posts
+    end
+
   end
 
   def show
