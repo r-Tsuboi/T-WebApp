@@ -195,17 +195,19 @@
   clear: both;
 }
 
-input[type="checkbox"] {
-  float: left;
-}
-
 .posts-edit-tags {
   margin-left: 20px;
   margin-bottom: 10px;
   float: left;
 }
 
+.posts-edit-tags input[type=checkbox] {
+  display: inline-block;
+  float: left;
+}
+
 .posts-edit-tags p {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 500;
+
 }
