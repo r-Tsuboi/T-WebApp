@@ -81,6 +81,11 @@ class PostsController < ApplicationController
       render("posts/edit")
     end
 
+    #チェックボックスで取得した登録しているタグを削除する
+    #@checked_tag = Tag.find_by(id: params[:now_tags])
+    #@delete_tag = Search.find_by(post_id: @post.id, tag_id: @checked_tag.id)
+    #@delete_tag.destroy
+
     @tag = params[:tag_name]
     @base_tags = @tag.delete("　")
     @tags = @base_tags.split(",")

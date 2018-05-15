@@ -14,6 +14,9 @@
             <% @search_tags.each do |tag| %>
             <div class="posts-edit-tags">
               <p>
+                <!-- チェックボックスの設置 -->
+                <!-- <%= check_box_tag :now_tags %> -->
+                <!-- <%= label_tag :now_tags, "#{tag.tag_name}" %> -->
                 <%= tag.tag_name %>
               </p>
             </div>

@@ -195,6 +195,10 @@
   clear: both;
 }
 
+input[type="checkbox"] {
+  float: left;
+}
+
 .posts-edit-tags {
   margin-left: 20px;
   margin-bottom: 10px;

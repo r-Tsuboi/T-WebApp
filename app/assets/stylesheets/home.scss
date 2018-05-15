@@ -79,7 +79,7 @@ body {
 /* ヘッダー ================================ */
 
 header {
-  height: 64px;
+  height: 70px;
   width: 100%;
   position: absolute;
   z-index: 1;
@@ -100,12 +100,13 @@ header {
 
 #menu{
   width: auto;
-  height: 60px;
+  height: 70px;
   padding: 5px 30px;
-  border-top: 1px #cccccc solid;
-  border-bottom: 1px #cccccc solid;
+  border-top: 1px #ddd solid;
+  border-bottom: 1px #ddd solid;
   list-style-type: none;
   background-color: #fff;
+  box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.1);
 }
 
 #menu li{
@@ -117,7 +118,7 @@ header {
 
 #menu li a{
   width: auto;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   margin: 0;
   padding: 8px 5px;

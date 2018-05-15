@@ -6,7 +6,7 @@ def user
   return User.find_by(id: self.user_id)
 end
 
-#投稿にタグ一覧を表示
+#投稿にタグ一覧を表示するためのメソッド
 def search_tags
   tags = []
   searchs = Search.where(post_id: self.id)
