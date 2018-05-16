@@ -10,15 +10,15 @@
             <input name="image" type="file">
           <p>内容</p>
             <textarea name="content"><%= @post.content %></textarea>
-          <p>現在登録されているタグ</p>
+          <p>現在登録されているタグ（チェックして保存を押すと削除できます）</p>
             <% @search_tags.each do |tag| %>
             <div class="posts-edit-tags">
 
                 <!-- チェックボックスの設置 -->
-                  <!-- <%= check_box_tag :now_tags %> -->
+                  <%= check_box_tag "now_tags[]", tag.id %>
                 <p>
-                  <!-- <%= label_tag :now_tags, "#{tag.tag_name}" %> -->
-                <%= tag.tag_name %>
+                  <%= label_tag "now_tags[#{tag.id}]"  , "#{tag.tag_name}" %>
+                <!-- <%= tag.tag_name %> -->
                 </p>
             </div>
             <% end %>

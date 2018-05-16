@@ -1,5 +1,6 @@
 class SeesController < ApplicationController
-
+  before_action :authenticate_user
+  
   def create
     @see = See.new(user_id: @current_user.id, post_id: params[:post_id])
     @see.save

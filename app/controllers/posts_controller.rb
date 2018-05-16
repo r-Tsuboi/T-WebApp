@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -82,9 +83,11 @@ class PostsController < ApplicationController
     end
 
     #チェックボックスで取得した登録しているタグを削除する
-    #@checked_tag = Tag.find_by(id: params[:now_tags])
-    #@delete_tag = Search.find_by(post_id: @post.id, tag_id: @checked_tag.id)
-    #@delete_tag.destroy
+    @checked_tags = Tag.where(id: params[:now_tags])
+    @checked_tags.each do |tag|
+      @delete_tag = Search.find_by(post_id: @post.id, tag_id: tag.id)
+      @delete_tag.destroy
+    end
 
     @tag = params[:tag_name]
     @base_tags = @tag.delete("　")
