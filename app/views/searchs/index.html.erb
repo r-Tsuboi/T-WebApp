@@ -1,7 +1,7 @@
 <div class="main searchs-index">
   <div class="container">
   <div class="searchs-form">
-    <h1 class="form-heading-searchs">検索する</h1>
+    <h1 class="form-heading-searchs">キーワードでさがす</h1>
     <div class="form-searchs">
       <div class="form-body-searchs">
         <% if @error_message %>
@@ -19,7 +19,7 @@
   </div>
 
   <div class="searchs-tag-index">
-    <h1>タグ一覧</h1>
+    <h1>タグでさがす</h1>
     <% @tags.each do |tag| %>
     <div class="searchs-tag">
       <%= link_to(tag.tag_name,"/searchs/#{tag.tag_name}/show") %>

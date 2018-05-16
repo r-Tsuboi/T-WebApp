@@ -46,11 +46,13 @@ body {
 
 .main {
   position: absolute;
-  top: 64px;
+  top: 100px;
   width: 100%;
   height: auto;
   min-height: 100%;
   background-color: #fff;
+
+  margin-bottom: 50px;
 }
 
 .container {
@@ -63,16 +65,6 @@ body {
 
 body {
   max-width: 800px;
-}
-
-.main {
-  position: absolute;
-  top: 64px;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  margin-top: 60px;
-  margin-bottom: 50px;
 }
 
 
@@ -92,11 +84,12 @@ header {
 }
 
 #Applogo a{
-  font-size: 22px;
+  font-size: 25px;
   color: #555;
   font-weight: bold;
   padding: 10px;
   border-radius: 20px;
+
 }
 
 #menu{
@@ -110,7 +103,7 @@ header {
 }
 
 #menu li{
-  width: 130px;
+  width: 140px;
   float: right;
   padding: 5px 10px;
 }
@@ -216,23 +209,32 @@ p.info-image-top img{
 
 /* リンク ================================ */
 .user-link{
-  margin: 0 auto 100px;
-  width: 60%;
+  margin: 100px auto 200px;
+  background-image: url("/top_link.jpg");
+  box-shadow: inset 0 0 15px 15px #fff;
+  padding: 60px 30px;
+  width: 80%;
+  border-radius: 30px;
 }
 
 .user-link h3 {
   font-size: 50px;
   font-weight: normal;
+  margin-bottom: 20px;
 }
 
 
 .signup-link{
   margin: 20px auto;
-  width: 300px;
+  padding: 20px 40px;
+  margin: 5px 30px;
+  background-color: #dbf;
+  display: inline-block;
+  border-radius: 20px;
 }
 
 .signup-link a{
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .signup-link a:hover{
@@ -241,11 +243,15 @@ p.info-image-top img{
 
 .login-link{
   margin: 20px auto;
-  width: 300px
+  padding: 20px 40px;
+  margin: 5px 30px;
+  background-color: #fb9;
+  display: inline-block;
+  border-radius: 20px;
 }
 
 .login-link a{
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .login-link a:hover{
@@ -263,7 +269,7 @@ p.info-image-top img{
 
 .form-heading {
   font-weight: 300;
-  margin: 70px 0 20px 60px;
+  margin: 20px 0 20px 60px;
   font-size: 48px;
   color: #555;
 }
@@ -323,7 +329,7 @@ p.info-image-top img{
   background: #ff6b35;
   text-align: center;
   position: absolute;
-  top: 70px;
+  top: 60px;
   z-index: 10;
   width: 100%;
   border-radius: 0 0 2px 2px;
