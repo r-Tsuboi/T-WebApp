@@ -55,7 +55,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 20px auto;
+  margin: auto;
   padding-left: 15px;
   padding-right: 15px;
   clear: both;
@@ -71,7 +71,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 100%;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 50px;
 }
 
@@ -81,21 +81,23 @@ body {
 header {
   height: 70px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 100%;
   text-align: center;
 }
 
 #Applogo {
-  height: auto;
-  margin: 10px auto;
+  float: left;
 }
 
 #Applogo a{
   font-size: 20px;
-  color: #333;
-  font-weight: 500;
+  color: #555;
+  font-weight: 800;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 #menu{
@@ -105,8 +107,8 @@ header {
   border-top: 1px #ddd solid;
   border-bottom: 1px #ddd solid;
   list-style-type: none;
-  background-color: #fff;
-  box-shadow: 0px 5px 4px 1px rgba(0,0,0,0.05);
+  background-color: #fdf;
+  box-shadow: 0px 5px 7px 1px rgba(80,60,80,0.05);
 }
 
 #menu li{
@@ -119,12 +121,13 @@ header {
 #menu li a{
   width: auto;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 550;
   margin: 0;
   padding: 8px 5px;
   text-decoration: none;
   display: block;
   text-align: center;
+  color: #333;
 }
 
 #menu li a:hover{
