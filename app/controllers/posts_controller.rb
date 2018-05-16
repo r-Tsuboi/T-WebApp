@@ -89,6 +89,7 @@ class PostsController < ApplicationController
       @delete_tag.destroy
     end
 
+    #新しくタグを登録する
     @tag = params[:tag_name]
     @base_tags = @tag.delete("　")
     @tags = @base_tags.split(",")
