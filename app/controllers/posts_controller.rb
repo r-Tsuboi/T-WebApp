@@ -130,7 +130,7 @@ class PostsController < ApplicationController
       see.destroy
     end
 
-    flash[:notice] = "削除しました"
+    flash[:notice] = "スキを削除しました"
     redirect_to("/posts/index")
   end
 

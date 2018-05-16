@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user, {only: [:index, :show, :edit, :update]}
   before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
-  before_action :ensure_correct_user, {only: [:edit, :update]}
 
   def index
     @users = User.all
@@ -20,7 +19,7 @@ class UsersController < ApplicationController
                     image_name:"default_user.jpg", password: params[:password])
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "ユーザー登録が完了しました"
+      flash[:notice] = "はじめまして、ユーザー登録が完了しました。"
       redirect_to("/posts/index")
     else
       render("users/new")
@@ -58,17 +57,17 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email],password: params[:password])
     if @user
       session[:user_id] = @user.id
-      flash[:notice] = "ログインしました"
+      flash[:notice] = "こんにちは、今日もよろしくお願いしますね"
       redirect_to("/users/#{@user.id}")
     else
-      @error_massage = "ログインできませんでした"
+      @error_massage = "ログインに失敗しました。もう一度試してみてください"
       render("/users/login_form")
     end
   end
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = "ログアウトしました"
+    flash[:notice] = "さようなら、また会いましょう"
     redirect_to("/login")
   end
 
