@@ -11,10 +11,8 @@ class SearchsController < ApplicationController
     if params[:tag_name].blank?
       redirect_to("/searchs/index")
       flash[:notice] = "文字を入力してください"
-
     elsif @tags = Tag.find_by("tag_name like '%" + @word + "%'")
       redirect_to("/searchs/#{params[:tag_name]}")
-
     else
       redirect_to("/searchs/index")
       flash[:notice] = "検索結果がありませんでした、違うキーワードを入れてみてください"
