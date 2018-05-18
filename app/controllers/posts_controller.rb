@@ -36,6 +36,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to("/posts/index")
     else
+      @error_message = "投稿できませんでした"
       render("posts/new")
     end
 
@@ -82,14 +83,12 @@ class PostsController < ApplicationController
       render("posts/edit")
     end
 
-    #チェックボックスで取得した登録しているタグを削除する
     @checked_tags = Tag.where(id: params[:now_tags])
     @checked_tags.each do |tag|
       @delete_tag = Search.find_by(post_id: @post.id, tag_id: tag.id)
       @delete_tag.destroy
     end
 
-    #新しくタグを登録する
     @tag = params[:tag_name]
     @base_tags = @tag.delete("　")
     @tags = @base_tags.split(",")
@@ -111,26 +110,25 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    #投稿を消す
     @post = Post.find_by(id: params[:id])
     @post.destroy
-    #登録しているタグを消す
+
     @searchs = Search.where(post_id: @post.id)
     @searchs.each do |search|
       search.destroy
     end
-    #いいねされた情報を消す
+
     @likes = Like.where(post_id: @post.id)
     @likes.each do |like|
       like.destroy
     end
-    #わかるされた情報を消す
+
     @sees = See.where(post_id: @post.id)
     @sees.each do |see|
       see.destroy
     end
 
-    flash[:notice] = "スキを削除しました"
+    flash[:notice] = "投稿を削除しました"
     redirect_to("/posts/index")
   end
 

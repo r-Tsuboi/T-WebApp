@@ -3,6 +3,11 @@
     <div class="form-heading">新規ユーザー登録</div>
     <div class="form users-form">
       <div class="form-body">
+        <% if @error_message %>
+          <div class="form-error">
+            <%= @error_message %>
+          </div>
+        <% end %>
         <%= form_tag("/users/create") do %>
         <p>ユーザー名</p>
         <input name="name">
