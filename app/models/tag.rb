@@ -1,7 +1,6 @@
 class Tag < ApplicationRecord
   validates :tag_name, {presence: true}
 
-
   def search_posts
     posts = []
     searchs = Search.where(tag_id: self.id)

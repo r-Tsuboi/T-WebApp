@@ -2,7 +2,7 @@
 <div class="container">
   <div class="searchs-form">
     <h1 class="form-heading-searchs">「 <%= @word %> 」</h1>
-      <% @tags.each do |post| %>
+      <% @posts.each do |post| %>
       <div class="posts-index-item">
         <div class="posts-title">
           <%= link_to(post.title,"/posts/#{post.id}") %>
@@ -22,6 +22,5 @@
       <% end %>
 
   </div>
-
 </div>
 </div>
