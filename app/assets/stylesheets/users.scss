@@ -36,11 +36,11 @@
 /* users/show ================================ */
 .user-show {
   margin-top: 20px;
-  text-align: center;
 }
 
 .user {
   margin-bottom: 20px;
+    text-align: center;
 }
 
 .user img {
@@ -63,7 +63,7 @@
   color: #8899a6;
   text-decoration: underline;
   font-weight: 200;
-  font-size: 15px;  
+  font-size: 15px;
 }
 
 .user span {
@@ -73,6 +73,7 @@
 }
 
 .user-tabs {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
   border-top: 1px solid #ddd;

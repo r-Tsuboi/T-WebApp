@@ -24,7 +24,7 @@ class SearchsController < ApplicationController
     @word = params[:tag_name]
     @tags = Tag.where("tag_name like '%" + @word + "%'")
     @tags.each do |tag|
-      @tag = Tag.find_by(id: tag.id)
+      @tag =  Tag.find_by(id: tag.id)
       @posts = @tag.search_posts
     end
   end
