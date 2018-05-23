@@ -23,9 +23,10 @@ class SearchsController < ApplicationController
   def result
     @word = params[:tag_name]
     @tags = Tag.where("tag_name like '%" + @word + "%'")
+    @tags_posts = []
     @tags.each do |tag|
       @tag =  Tag.find_by(id: tag.id)
-      @posts = @tag.search_posts
+      @tags_posts.push(tag)
     end
   end
 

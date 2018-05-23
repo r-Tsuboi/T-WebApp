@@ -12,4 +12,6 @@ class Tag < ApplicationRecord
     return posts
   end
 
+
+
 end

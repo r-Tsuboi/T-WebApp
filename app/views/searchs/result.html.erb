@@ -2,7 +2,8 @@
 <div class="container">
   <div class="searchs-form">
     <h1 class="form-heading-searchs">「 <%= @word %> 」</h1>
-      <% @posts.each do |post| %>
+      <% @tags_posts.each do |posts| %>
+      <% posts.search_posts.each do |post| %>
       <div class="posts-index-item">
         <div class="posts-title">
           <%= link_to(post.title,"/posts/#{post.id}") %>
@@ -19,6 +20,7 @@
           <%= link_to(post.user.name, "/users/#{post.user.id}") %>
         </div>
       </div>
+      <% end %>
       <% end %>
 
   </div>
