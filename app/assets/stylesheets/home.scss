@@ -143,12 +143,12 @@ header {
 }
 
 .top-main {
-  margin-top: 100px;
+  margin-top: 40px;
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
   background-image: url("/top.png");
-  background-size: 1000px auto;
+  background-size: 60% auto;
 }
 
 .top-message h2 {
@@ -168,8 +168,9 @@ header {
 /* info ================================ */
 .info {
   width: 90%;
-  height: 500px;
-  margin: 300px auto 50px auto;
+  height: 550px;
+  margin: 130px auto 50px auto;
+  padding: 5px;
   background-color: #ffa;
   border-radius: 10px;
   text-align: center;
@@ -177,35 +178,38 @@ header {
 
 .info h2 {
   font-weight: normal;
-  padding: 10px;
+  padding: 5px;
   font-size: 50px;
   color: #222;
 }
 
-.info-top {
-  margin: 50px auto;
+.info_block_all {
+  text-align: center;
 }
 
-.info p {
-  padding-top: 30px;
-  font-size: 25px;
-  color: #444;
+.info_block {
+  width: 33%;
+  padding: 5px;
+  float: left;
+  margin: 0 auto;
 }
 
 p.info-image img{
-  width: 50%;
+  width: 80%;
   height: 350px;
-  padding: 0 0 30px 30px;
   object-fit: cover;
-  float: left;
+  object-position: 0 0;
   margin: auto 20px;
+  float: none;
+  box-shadow: 2px 2px 4px gray;
 }
 
-.info-text{
-  width: 40%;
-  height: auto;
-  margin: 20px auto;
-  display: inline-block;
+.info-text p{
+  margin: 5px auto;
+  padding: 5px;
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
 }
 
 /* リンク ================================ */
