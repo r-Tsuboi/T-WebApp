@@ -2,12 +2,16 @@ class PostsController < ApplicationController
   before_action :authenticate_user
 
   def index
+    #投稿データをすべて持ってくる
     @posts = Post.all.order(created_at: :desc)
   end
 
   def show
+    #投稿IDを変数に代入
     @post = Post.find_by(id: params[:id])
+    #投稿IDからユーザデータを取り出す
     @user = User.find_by(id: @post.user_id)
+    #投稿データからタグを参照する
     @search_tags = @post.search_tags
   end
 

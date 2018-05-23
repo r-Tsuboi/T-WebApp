@@ -168,12 +168,13 @@ header {
 /* info ================================ */
 .info {
   width: 90%;
-  height: 550px;
+  height: 580px;
   margin: 130px auto 50px auto;
-  padding: 5px;
+  padding: 10px;
   background-color: #ffa;
   border-radius: 10px;
   text-align: center;
+  box-shadow: inset 0px 0px 10px 10px #fff;
 }
 
 .info h2 {
@@ -202,6 +203,8 @@ p.info-image img{
   margin: auto 20px;
   float: none;
   box-shadow: 2px 2px 4px gray;
+  border-radius: 10px;
+
 }
 
 .info-text p{
