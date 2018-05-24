@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   def index
     #投稿データをすべて持ってくる
-    @posts = Post.all.order(created_at: :desc)
+    @posts = Post.all.order(updated_at: :desc)
   end
 
   def show
