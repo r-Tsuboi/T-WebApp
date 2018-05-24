@@ -196,6 +196,7 @@
 }
 
 .posts-edit-tags {
+  width: 80px;
   margin-left: 20px;
   margin-bottom: 10px;
   float: left;
@@ -204,10 +205,11 @@
 .posts-edit-tags input[type=checkbox] {
   display: inline-block;
   float: left;
+  width: auto;
 }
 
-.posts-edit-tags p {
+.posts-edit-tags h3 {
   font-size: 16px;
   font-weight: 500;
-
+  width: auto;
 }

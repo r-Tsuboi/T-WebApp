@@ -7,7 +7,7 @@ class Tag < ApplicationRecord
     #タグのデータから検索データを取得
     searchs = Search.where(tag_id: self.id)
 
-  　#複数の検索データを一つずつ処理
+    #複数の投稿データを一つずつ処理
     searchs.each do |search|
       #検索データから投稿データを取得
       post = Post.find_by(id: search.post_id)

@@ -14,9 +14,9 @@
             <% @search_tags.each do |tag| %>
             <div class="posts-edit-tags">
               <%= check_box_tag "now_tags[]", tag.id %>
-              <p>
+              <h3>
                 <%= label_tag "now_tags[#{tag.id}]"  , "#{tag.tag_name}" %>
-              </p>
+              </h3>
             </div>
             <% end %>
 
