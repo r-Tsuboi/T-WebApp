@@ -28,10 +28,6 @@ class PostsController < ApplicationController
     #入力された値から各カラムにデータを入れる
     @post = Post.new(title: params[:title], content: params[:content],
                       post_image: params[:post_image], user_id:@current_user.id)
-    #タイトルに入力された値をカラムに追加
-    @post.title = params[:title]
-    #投稿内容に入力された値をカラムに追加
-    @post.content = params[:content]
     #投稿データを保存する
     @post.save
 

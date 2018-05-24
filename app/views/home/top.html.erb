@@ -21,18 +21,6 @@
 
       <div class="info_block">
         <p class="info-image">
-          <img src="/info02.jpg">
-        </p>
-        <div class="info-text">
-          <p>
-            気に入った”好き”に応えよう<br>
-            「いいね」「わかる」の二種類の反応ができる
-          </p>
-        </div>
-      </div>
-
-      <div class="info_block">
-        <p class="info-image">
           <img src="/info03.jpg">
         </p>
         <div class="info-text">
@@ -42,12 +30,23 @@
           </p>
         </div>
       </div>
+
+      <div class="info_block">
+        <p class="info-image">
+          <img src="/info02.jpg">
+        </p>
+        <div class="info-text">
+          <p>
+            気に入った”好き”に応えよう<br>
+            「いいね」「わかる」の二種類の反応ができる
+          </p>
+        </div>
+      </div>
     </div>
 
   </div>
 
-  <% if session[:user_id] %>
-  <% else %>
+  <% if session[:user_id] == nil %>
   <div class="user-link">
     <h3>さあ、あなたも始めよう</h3>
   <div class="link">
